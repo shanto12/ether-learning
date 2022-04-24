@@ -2,11 +2,11 @@
 async function main () {
     // We get the contract to deploy
     // const Box = await ethers.getContractFactory('Box');
-    const Box = await ethers.getContractFactory('fortune_eth');
-    console.log('Deploying Box...');
-    const box = await Box.deploy();
+    const Fortune = await ethers.getContractFactory('Fortune');
+    console.log('Deploying Fortune...');
+    const box = await Fortune.deploy();
     await box.deployed();
-    console.log('Box deployed to:', box.address);
+    console.log('Fortune deployed to:', box.address);
 }
 
 main()
@@ -15,3 +15,21 @@ main()
         console.error(error);
         process.exit(1);
     });
+
+
+// // scripts/deploy.js
+// async function main () {
+//     // We get the contract to deploy
+//     const Box = await ethers.getContractFactory('Box');
+//     console.log('Deploying Box...');
+//     const box = await Box.deploy();
+//     await box.deployed();
+//     console.log('Box deployed to:', box.address);
+// }
+//
+// main()
+//     .then(() => process.exit(0))
+//     .catch(error => {
+//         console.error(error);
+//         process.exit(1);
+//     });
